@@ -1,0 +1,20 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    background-image: linear-gradient(333deg, rgba(139, 0, 0, 1) 20%, rgba(16, 0, 173, 1) 100%);
+    color: white;
+    font-family: Roboto, Arial;
+}
+
+.body-container{
+    display: flex;
+    flex-direction: column;
+}
+
