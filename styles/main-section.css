@@ -8,7 +8,7 @@
     justify-content: end;
     align-items: center;
     height: 100%;
-    border-bottom: 1px solid white;
+    /* border-bottom: 1px solid white; */
     padding-left: 90px;
     padding-right: 90px;
     gap: 20px;
@@ -17,4 +17,57 @@
 .content-container{
     /* height: 100%; */
     overflow: scroll;
+    /* margin-bottom: 50px; */
 }
+
+.input-container{
+    display: flex;
+    width: 100%;
+    align-items: center; 
+    justify-content: center;
+    height: 30px;
+    margin-bottom: 10px;
+    /* position: relative; */
+}
+
+.input-field{
+    flex-basis: 500px;
+    height: 40px;
+    border: 1px solid black;
+    border-right: none;
+    background-color: rgba(0, 0, 0, 0.163);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding-left: 10px;
+    color: white;
+}
+
+.input-field:focus{
+    outline: none;
+}
+.input-field::placeholder{
+    color: rgba(255, 255, 255, 0.56);
+}
+.send-button{
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    border-left: none;
+    background-color: rgba(0, 0, 0, 0.163);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    /* padding-right: 10px; */
+    cursor: pointer;
+    transition: all .15s ease;
+}
+.send-button:hover{
+    background-color: rgba(255, 255, 255, 0.16);
+}
+
+.bi-send{
+    margin-top: 5px;
+    /* margin-left: 8px; */
+}
+/* .bi-send:hover{
+    background-color: white;
+} */
