@@ -1,0 +1,40 @@
+.about-content-container{
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+
+.about-header-section{
+    display: flex;
+    padding-top: 23px;
+    padding-left: 90px;
+    margin-bottom: 10px;
+
+}
+
+/* .home-page-link{
+    border: 1px solid white;
+    min-width: 27px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all .15s ease;
+    padding: 2px 5px;
+} */
+
+.home-page-container{
+    border: 1px solid white;
+    min-width: 27px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all .15s ease;
+    padding: 2px 5px;
+}
+.home-page-container:hover{
+    background-color: rgba(255, 255, 255, 0.16);
+
+}
+
+.bi-house{
+    color: white;
+    margin-top: 1.5px;
+}

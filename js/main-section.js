@@ -21,6 +21,7 @@ function addMessageToDOM(message) {
   contentSection.appendChild(userContainer);
 }
 
+//  I might not need the message parameter
 function sendResponseToDOM(message) {
   const responseContainer = document.createElement("div");
   const responseMessage = document.createElement("p");
