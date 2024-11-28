@@ -1,8 +1,10 @@
+import { fetchResponse } from "./data.js";
+
 const inputField = document.querySelector(".input-field");
 const sendButton = document.querySelector(".send-button");
 let contentSection = document.querySelector(".content-container");
 
-function getUserMessage() {
+export function getUserMessage() {
   let message = ""; // I can take this out later and use as a return function
   message = inputField.value;
   inputField.value = "";
@@ -21,27 +23,43 @@ function addMessageToDOM(message) {
   contentSection.appendChild(userContainer);
 }
 
-//  I might not need the message parameter
-function sendResponseToDOM(message) {
+export function sendResponseToDOM(response, category) {
   const responseContainer = document.createElement("div");
   const responseMessage = document.createElement("p");
 
   responseContainer.classList.add("response-content-container");
-  responseMessage.classList.add("response-message");
+  if (category === 'title'){
+    responseMessage.classList.add("response-message-title");
+    responseMessage.textContent =
+    response;
+  }else if(category === 'body'){
+    responseMessage.classList.add("response-message-body");
+    responseMessage.textContent =
+    response;
+  }else if(category === 'publisher'){
+    responseMessage.classList.add("response-message-publisher");
+    responseMessage.textContent =
+    response;
+  } else if (category === 'link'){
+    responseMessage.innerHTML = `<a href="${response}" target="_blank" class="response-message-source">Source</a>`
+    response;
+  }
 
-  responseMessage.textContent =
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur provident atque quibusdam quas, saepe inventore ullam qui deleniti.";
+  // responseMessage.textContent =
+  //   response;
   responseContainer.appendChild(responseMessage);
   contentSection.appendChild(responseContainer);
 }
 
 inputField.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
-    addMessageToDOM(getUserMessage());
-    sendResponseToDOM(getUserMessage());
+    const message = getUserMessage()
+    addMessageToDOM(message);
+    fetchResponse(message);
   }
 });
 sendButton.addEventListener("click", function () {
-  addMessageToDOM(getUserMessage());
-  sendResponseToDOM(getUserMessage());
+  const message = getUserMessage()
+  addMessageToDOM(message);
+  fetchResponse(message);
 });

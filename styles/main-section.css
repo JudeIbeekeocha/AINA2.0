@@ -63,7 +63,6 @@
 }
 
 
-
 .user-content-container{
     text-align: right;
 }
@@ -75,25 +74,56 @@
     margin-bottom: 10px;
     border-radius: 5px;
     padding: 10px;
-
+    margin-left: auto;
 }
 
 .response-content-container{
     text-align: left;
+
 }
-.response-message{
+.response-message-title{
     display: inline-block;
     text-align: left;
-    background-color: rgba(255, 255, 255, 0.16) ;
     margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    padding: 10px;
 }
-.response-message::first-letter{
+.response-message-title{
+    font-size: 20px;
+}
+.response-message-body{
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+.response-message-body::first-letter{
     font-size: 30px;
 }
+.response-message-publisher{
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.response-message-source{
+    display: inline-block;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: white;
+}
+.response-message-source:active{
+    color: rgba(255, 255, 255, 0.16)
+}
 
-.ticker-tape{
-    /* margin-bottom: 10px; */
+.response-message-body,
+.response-message-title,
+.response-message-publisher,
+.response-message-source{
+    padding-left: 5px;
+}
+
+.response-content-container{
+    border-left: 1px solid rgba(255, 255, 255, 0.50);
+
 }
