@@ -6,7 +6,7 @@ export function fetchResponse(message) {
   };
   console.log(dataToSend)
 
-  fetch("http://127.0.0.1:5000/receive-json", {
+  fetch("https://6a3d-2601-c4-c500-ffe0-e067-5080-7dc9-9926.ngrok-free.app/receive-json", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
