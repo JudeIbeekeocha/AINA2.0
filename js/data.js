@@ -4,9 +4,9 @@ export function fetchResponse(message) {
   let dataToSend = {
     ticker: message,
   };
-  console.log(dataToSend)
+  // console.log(dataToSend)
 
-  fetch("https://openly-adapted-tapir.ngrok-free.app/receive-json", {
+  fetch("https://aina-backend.onrender.com/receive-json", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -15,7 +15,7 @@ export function fetchResponse(message) {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log("Response from server:", data);
+      // console.log("Response from server:", data);
       let res = data.received_data
       sendResponseToDOM(res.title, 'title')
       sendResponseToDOM(res.publisher, 'publisher')
